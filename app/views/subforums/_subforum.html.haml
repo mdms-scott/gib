@@ -3,3 +3,7 @@
     = subforum.title
   %p
     = subforum.description
+  %p
+    = link_to 'Edit', edit_subforum_path(subforum)
+    = "/"
+    = link_to 'Delete', subforum_path(subforum), :method => 'delete', :confirm => "Are you sure you want to delete #{subforum.title}"
