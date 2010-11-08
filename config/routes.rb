@@ -3,6 +3,7 @@ Gib::Application.routes.draw do
 
   resources :subforums
   resources :topics
+  resources :posts
 
   root :to => "home#index"
 

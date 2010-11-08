@@ -1,0 +1,15 @@
+= form_for(@post) do |f|
+  = f.error_messages
+  %fieldset
+    %legend
+      Information
+    %p
+      = f.label :message
+      %br
+      = f.text_area :message
+    
+    =f.hidden_field :topic_id
+  %p
+    = f.submit
+    or
+    %a.cancel_link{ :href => posts_path } Cancel

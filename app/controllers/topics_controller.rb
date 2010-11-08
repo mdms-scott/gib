@@ -3,6 +3,7 @@ class TopicsController < ApplicationController
   respond_to :html, :json
   
   before_filter :find_topic, :except => ['index', 'new', 'create']
+  before_filter :find_posts, :except => ['index', 'new', 'create']
   
   def index
     @topics = Topic.all
@@ -25,7 +26,7 @@ class TopicsController < ApplicationController
     @topic.user_id = current_user.id
     if @topic.save
       flash[:notice] = "Successfully created topic."
-      respond_with @topic, :location => topics_path
+      respond_with @topic, :location => new_post_path
     else
       flash[:alert] = "Failed to create topic."
       render :action => :new
@@ -55,6 +56,10 @@ class TopicsController < ApplicationController
   
   def find_topic
     @topic = Topic.find(params[:id])
+  end
+  
+  def find_posts
+    @posts = @topic.posts
   end
   
 end
