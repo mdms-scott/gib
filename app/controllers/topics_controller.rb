@@ -26,7 +26,7 @@ class TopicsController < ApplicationController
     @topic.user_id = current_user.id
     if @topic.save
       flash[:notice] = "Successfully created topic."
-      respond_with @topic, :location => new_post_path
+      respond_with @topic, :location => new_post_path(:topic_id => @topic.id)
     else
       flash[:alert] = "Failed to create topic."
       render :action => :new

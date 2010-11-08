@@ -25,7 +25,8 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     if @post.save
       flash[:notice] = "Successfully replied to topic."
-      respond_with @post, :location => topic_path(@post.topic)
+      #respond_with @post, :location => topic_path(@post.topic)
+      respond_with @topic, :location => topic_url(@post.topic)
     else
       flash[:alert] = "Failed to create post."
       render :action => :new
