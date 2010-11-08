@@ -1,8 +1,14 @@
-%p
-  = @subforum.title
-%p
-  Description
-  %em
+#title_container
+  .title
+    = @subforum.title
+  .description
     = @subforum.description
+    
+#topics_container
+  %ul    
+    = render :partial => 'topic', :collection => @topics
+    
+#subforum_actions
+  = link_to 'Post a new Topic', new_topic_path(:subforum_id => @subforum.id)
 
 = link_to "Back to subforums", root_path

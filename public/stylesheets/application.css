@@ -48,7 +48,26 @@ ul {
   padding: 0px; }
   #home_subforum:hover {
     background-color: #eeeeee; }
+  #home_subforum a {
+    text-decoration: none; }
 
 /* STYLES FOR SUBFORUMS */
+#title_container {
+  border-bottom: 1px solid black; }
+
+#topics_container {
+  margin-left: 5px;
+  margin-bottom: 20px; }
+
 /* STYLES FOR TOPICS */
+.topic_title {
+  font-family: arial;
+  letter-spacing: 1px;
+  font-size: big; }
+
+.topic_description {
+  font-family: arial;
+  font-size: smaller;
+  margin-left: 10px; }
+
 /* STYLES FOR POSTS */

@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+subforum = Subforum.create!(
+  :title => 'Public Forum',
+  :description => 'This is the public forum for testing',
+  :is_private => '0'
+)
+
+subforum = Subforum.create!(
+  :title => 'Private Forum',
+  :description => 'This is the private forum for testing',
+  :is_private => '1'
+)

@@ -10,12 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108192245) do
+ActiveRecord::Schema.define(:version => 20101108211813) do
 
   create_table "subforums", :force => true do |t|
     t.string  "title"
     t.text    "description"
     t.integer "is_private"
+  end
+
+  create_table "topics", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.integer  "subforum_id"
+    t.integer  "view_count"
+    t.integer  "reply_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

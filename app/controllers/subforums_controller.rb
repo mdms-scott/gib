@@ -3,6 +3,7 @@ class SubforumsController < ApplicationController
   respond_to :html, :json
   
   before_filter :find_subforum, :except => ['index', 'new', 'create']
+  before_filter :find_topics, :except => ['index', 'new', 'create']
   
   def index
     @subforums = Subforum.all
@@ -51,6 +52,10 @@ class SubforumsController < ApplicationController
   
   def find_subforum
     @subforum = Subforum.find(params[:id])
+  end
+  
+  def find_topics
+    @topics = @subforum.topics
   end
   
 end
