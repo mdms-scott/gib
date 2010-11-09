@@ -51,8 +51,6 @@ ActiveRecord::Schema.define(:version => 20101109034120) do
     t.text     "description"
     t.integer  "user_id"
     t.integer  "subforum_id"
-    t.integer  "view_count"
-    t.integer  "reply_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

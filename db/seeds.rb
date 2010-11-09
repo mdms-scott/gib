@@ -17,3 +17,17 @@ subforum = Subforum.create!(
   :description => 'This is the private forum for testing',
   :is_private => '1'
 )
+
+user = User.create!(
+  :username => 'user',
+  :email => 'user@email.com',
+  :password => 'password',
+  :password_confirmation => 'password'
+)
+
+admin = Admin.create!(
+  :username => 'admin',
+  :email => 'admin@email.com',
+  :password => 'password',
+  :password_confirmation => 'password'
+)

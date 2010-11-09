@@ -5,8 +5,7 @@ class CreateTopics < ActiveRecord::Migration
       t.text :description
       t.integer :user_id
       t.integer :subforum_id
-      t.integer :view_count
-      t.integer :reply_count
+
 
       t.timestamps
     end
