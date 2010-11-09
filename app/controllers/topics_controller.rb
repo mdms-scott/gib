@@ -61,7 +61,7 @@ class TopicsController < ApplicationController
   end
   
   def find_posts
-    @posts = @topic.posts
+    @posts = @topic.posts.paginate :page => params[:page], :order => 'created_at ASC', :per_page => 10
   end
   
 end

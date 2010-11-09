@@ -9,6 +9,7 @@
     = render :partial => 'post', :collection => @posts
     
 #subforum_actions
+  = will_paginate @posts
   = link_to 'Post a reply', new_post_path(:topic_id => @topic.id)
   = link_to "Back to topics", subforum_path(@topic.subforum)
 .clear
