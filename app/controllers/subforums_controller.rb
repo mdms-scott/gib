@@ -5,6 +5,7 @@ class SubforumsController < ApplicationController
   before_filter :find_subforum, :except => ['index', 'new', 'create']
   before_filter :find_topics, :except => ['index', 'new', 'create']
   before_filter :authenticate_user!, :except => ['show']
+  before_filter :authenticate_admin!, :except => ['show']
   
   def index
     @subforums = Subforum.all

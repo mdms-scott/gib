@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   
   before_filter :find_posts, :except => ['index', 'new', 'create']
   before_filter :authenticate_user!, :except => ['show']
+  before_filter :authenticate_admin!, :except => ['show', 'new', 'create']
   
   def index
     @posts = Post.all
