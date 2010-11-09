@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   respond_to :html, :json
   
   before_filter :find_posts, :except => ['index', 'new', 'create']
+  before_filter :authenticate_user!, :except => ['show']
   
   def index
     @posts = Post.all

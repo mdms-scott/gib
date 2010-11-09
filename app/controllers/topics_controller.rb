@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
   
   before_filter :find_topic, :except => ['index', 'new', 'create']
   before_filter :find_posts, :except => ['index', 'new', 'create']
+  before_filter :authenticate_user!, :except => ['show']
   
   def index
     @topics = Topic.all
