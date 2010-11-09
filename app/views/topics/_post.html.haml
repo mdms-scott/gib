@@ -1,10 +1,12 @@
 %li
-  #user_box
-    .post_username
-      = post.user.username
-    = post.created_at.strftime( '%b %d, %Y %I:%M' )
-  #message_box
-    .post_message
-      = post.message
-      
-  .clear
+  #post_container
+    #user_box
+      .post_username
+        = post.user.username
+      = post.created_at.strftime( '%b %d, %Y %I:%M' )
+    #message_box
+      .post_message
+        = post.message
+        
+    .clear
+    

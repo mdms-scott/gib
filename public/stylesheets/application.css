@@ -81,18 +81,24 @@ body {
 #user_box {
   width: 150px;
   height: 50px;
-  border-bottom: 1px solid black;
   float: left;
   position: relative;
   padding: 2px; }
 
 #message_box {
-  border-bottom: 1px solid black;
   float: left;
   position: relative;
-  height: 50px;
-  width: 730px;
+  width: 720px;
   padding: 2px; }
+
+#post_container {
+  width: 895px;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid black; }
 
 .post_username {
   font-family: times_new_roman; }
+
+.post_message {
+  font-size: 14px; }
