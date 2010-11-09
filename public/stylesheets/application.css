@@ -22,6 +22,9 @@ ul {
   font-size: smaller;
   margin-left: 10px; }
 
+body {
+  font-family: arial; }
+
 /* STYLES FOR MAIN PAGE */
 #user_cp {
   border: 1px solid black;
@@ -60,6 +63,9 @@ ul {
   margin-left: 5px;
   margin-bottom: 20px; }
 
+#subforum_actions {
+  float: right; }
+
 /* STYLES FOR TOPICS */
 .topic_title {
   font-family: arial;
@@ -75,16 +81,18 @@ ul {
 #user_box {
   width: 150px;
   height: 50px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   float: left;
-  position: relative; }
+  position: relative;
+  padding: 2px; }
 
 #message_box {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   float: left;
   position: relative;
   height: 50px;
-  width: 730px; }
+  width: 730px;
+  padding: 2px; }
 
 .post_username {
   font-family: times_new_roman; }

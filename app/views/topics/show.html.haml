@@ -8,7 +8,7 @@
   %ul    
     = render :partial => 'post', :collection => @posts
     
-#topic_actions
+#subforum_actions
   = link_to 'Post a reply', new_post_path(:topic_id => @topic.id)
-
-= link_to "Back to topics", subforum_path(@topic.subforum)
+  = link_to "Back to topics", subforum_path(@topic.subforum)
+.clear
