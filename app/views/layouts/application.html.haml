@@ -11,3 +11,6 @@
   .clear
   #main_container
     = yield
+  - if admin_signed_in?  
+    #admin_cp
+      = render :partial => '/shared/admin_cp'

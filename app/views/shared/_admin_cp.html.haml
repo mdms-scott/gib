@@ -1,0 +1,12 @@
+%ul
+  %li
+    Signed in as admin:
+    = current_admin.username
+  %li
+    = link_to 'Subforum Management', subforums_path
+  %li
+    = link_to 'Topic Management', topics_path
+  %li
+    = link_to 'Post Management', posts_path
+  %li
+    = link_to 'Logout Admin Account', destroy_admin_session_path

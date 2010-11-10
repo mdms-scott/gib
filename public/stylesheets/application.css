@@ -54,6 +54,17 @@ body {
   #home_subforum a {
     text-decoration: none; }
 
+#admin_cp {
+  border: 1px solid black;
+  width: 900px;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  text-align: center; }
+  #admin_cp ul {
+    list-style: none; }
+    #admin_cp ul li {
+      display: inline; }
+
 /* STYLES FOR SUBFORUMS */
 #title_container {
   border-bottom: 1px solid black;
