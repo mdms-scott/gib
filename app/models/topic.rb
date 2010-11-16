@@ -5,4 +5,6 @@ class Topic < ActiveRecord::Base
   
   has_many :posts
   
+  validates_presence_of :title, :descrpition, :user_id, :subforum_id
+  
 end
